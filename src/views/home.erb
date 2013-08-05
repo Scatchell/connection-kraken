@@ -1,7 +1,21 @@
 <h1>Current tokens</h1>
-<% @tokens.each do |token| %>
+<% if flash[:error] %>
+    <div class='info_message'>
+        <%= flash[:error] %>
+    </div>
+<% end %>
+
+<% @users.each do |user| %>
     <p>
-    <%= token.content %>
+    <%= user.name %> <a href="/<%=user.id%>/delete">(delete this user)</a>
+    </p>
+
+    <p>
+        <img src="<%= user.picture_url %>">
+    </p>
+
+    <p>
+        <%= user.token.content %>
     </p>
 <% end %>
 <a href="/link_linked_in">Link your linked in account</a>

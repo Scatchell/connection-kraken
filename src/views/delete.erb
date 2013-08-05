@@ -1,0 +1,10 @@
+<% if @user %>  
+    <p>Are you sure you want to delete the following user: <em>"<%= @user.name %>"</em>?</p>
+    <form action="/<%= @user.id %>" method="post">
+        <input type="hidden" name="_method" value="delete">
+        <input type="submit" value="Yes, Delete It!">
+        <a href="/">Cancel</a>
+    </form>
+<% else %>
+    <p>user not found.</p>
+<% end %>  </em></p>

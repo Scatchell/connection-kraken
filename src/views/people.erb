@@ -1,0 +1,13 @@
+<% @people.each do |query_user, query_results| %>
+    <h1>Connections for: <%= query_user.name %></h1>
+
+    <% query_results.each do |person| %>
+        <p>
+            Name: <%= person.firstName + " " + person.lastName %>
+        </p>
+        <p>
+            Distance: <%=person.distance_text%>
+        </p>
+        <img src="<%=person.pictureUrl%>">
+    <% end %>
+<% end %>

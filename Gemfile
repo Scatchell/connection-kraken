@@ -6,6 +6,7 @@ gem 'sqlite3'
 gem 'datamapper'
 gem 'dm-sqlite-adapter'
 gem 'httparty'
+gem 'sinatra-flash'
 
 group :development do
     gem 'guard'
