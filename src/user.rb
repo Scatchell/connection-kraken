@@ -1,5 +1,5 @@
 class User
-  attr_accessor :connections
+  attr_accessor :user
   def initialize user
     @user = user
     @connections = {'1' => [], '2' => [], '3' => []}
